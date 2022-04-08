@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bchandekaraksapplication 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bchandekaraksapplication
+  template:
+    metadata:
+      labels:
+        app: bchandekaraksapplication 
+    spec:
+      containers:
+        - name: bchandekaraksapplication 
+          image: demoacrcb.azurecr.io/bchandekaraksapplication
+          ports:
+          - containerPort: 80
